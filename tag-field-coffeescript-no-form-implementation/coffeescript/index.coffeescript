@@ -1,0 +1,41 @@
+$(document).ready ->
+  app.init()
+  
+app =
+	can_delete: false
+
+	init: ->
+    @bind_events()
+    
+  bind_events: ->
+    $(document).on "keyup", ".tags input", (e) ->
+      key = e.keyCode || e.which
+      # If return or comma is pressed
+      if key is 13 or key is 188
+        # Remove commas and add new tag
+        app.add_tag $(this).val().replace(",", "")
+        # Clear input field
+        $(this).val("")
+      # If backspace is pressed
+      else if key is 8
+        # If input is empty
+        if $(this).val() is ""
+          # Prepare/Delete most recent tag
+	        app.delete_tag()
+      else
+        # Reset delete process
+        app.can_delete = false
+        $(".highlight").removeClass "highlight"
+        
+  delete_tag: ->
+    if @can_delete
+      # Delete tag
+      $(".tags .tag.highlight").remove()
+      @can_delete = false
+    else
+      # Prepare for deletetion
+      @can_delete = true
+      $(".tags .tag:last-of-type").addClass "highlight"
+        
+  add_tag: (name) ->
+    $(".tags input").before "<div class='tag'>" + name + "</div>"

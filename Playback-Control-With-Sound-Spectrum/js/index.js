@@ -1,4 +1,4 @@
-var sound = new Audio('http://media.soundcloud.com/stream/BkDZIahFB7ME.mp3');
+var sound = new Audio('mp3/ThriftShop.mp3');
 
 sound
 	.isPlayed = false
