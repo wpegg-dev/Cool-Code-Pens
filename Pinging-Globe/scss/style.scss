@@ -1,0 +1,24 @@
+@import "bourbon";
+
+body {
+  background-color: #000;
+}
+
+$portsgreen: #c1d72e;
+
+@include keyframes(blink) {
+		  0% {
+		    stroke: rgba($portsgreen, 0.8);
+		  	stroke-width: 1;
+		  } 
+		  100% {
+		    stroke: rgba($portsgreen, 0.1);
+		  	stroke-width: 15;
+		  }
+		}
+
+circle[fill="#c3d833"] {
+  padding: 20px;
+  position: relative;
+  @include animation(blink 1.5s infinite ease-out);
+}

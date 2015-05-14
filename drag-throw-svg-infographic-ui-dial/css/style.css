@@ -1,0 +1,33 @@
+body{
+  background-color:#181A19;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+
+}
+
+#container{
+  position:absolute;
+  width:285px;
+  height:218.7px;
+}
+#dial-value, #info{
+  color:#ecf0f1;
+  font-size:56pt;
+  font-family:Oswald, sans-serif;
+  text-align:center;
+
+}
+#dial-value{
+  font-size:54pt;  
+  margin-top:20px;
+
+}
+
+#info{
+  font-size:22pt;
+  margin-top:150px;
+
+
+
+}

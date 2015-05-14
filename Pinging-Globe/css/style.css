@@ -1,0 +1,41 @@
+body {
+  background-color: #000;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    stroke: rgba(193, 215, 46, 0.8);
+    stroke-width: 1;
+  }
+  100% {
+    stroke: rgba(193, 215, 46, 0.1);
+    stroke-width: 15;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    stroke: rgba(193, 215, 46, 0.8);
+    stroke-width: 1;
+  }
+  100% {
+    stroke: rgba(193, 215, 46, 0.1);
+    stroke-width: 15;
+  }
+}
+@keyframes blink {
+  0% {
+    stroke: rgba(193, 215, 46, 0.8);
+    stroke-width: 1;
+  }
+  100% {
+    stroke: rgba(193, 215, 46, 0.1);
+    stroke-width: 15;
+  }
+}
+circle[fill="#c3d833"] {
+  padding: 20px;
+  position: relative;
+  -webkit-animation: blink 1.5s infinite ease-out;
+  -moz-animation: blink 1.5s infinite ease-out;
+  animation: blink 1.5s infinite ease-out;
+}

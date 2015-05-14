@@ -1,0 +1,62 @@
+body {
+  background-color: #DC161C;
+  height: 300px;
+  width: 296.15px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#logo {
+  height: 300px;
+  width: 296.15px;
+  max-height: 100%;
+}
+
+.letters,
+#football {
+  display: none;
+}
+
+#ballfill {
+  fill: #edbb00;
+  fill-opacity: 1;
+  fill-rule: nonzero;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-opacity: 1;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  -webkit-animation: dash 2s linear forwards;
+  animation: dash 2s linear forwards;
+  
+}
+
+#ballstrokes path {
+  fill: none;
+  fill-rule: evenodd;
+  stroke: #000;
+  stroke-width: 3.5;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-opacity: 1;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  -webkit-animation: dash 4s linear forwards;
+  animation: dash 4s linear forwards;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
